@@ -112,6 +112,7 @@ document.getElementById("copyBDRail").addEventListener("click", function () {
   copyNumber("copyBDRail");
 });
 
+let callHistorySection = document.getElementById("callHistorySection");
 function seeCallHistory() {
   let callHistorySection = document.getElementById("callHistorySection");
   callHistorySection.innerHTML = ``;
@@ -133,9 +134,9 @@ function seeCallHistory() {
   }
 }
 
-seeCallHistory();
-
 document.getElementById("clearButton").addEventListener("click", function () {
-  History = [];
+  console.log("Clear button clicked");
+  History.length = 0; 
   callHistorySection.innerHTML = "";
+  seeCallHistory();
 });
