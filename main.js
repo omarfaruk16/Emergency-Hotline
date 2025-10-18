@@ -1,3 +1,6 @@
+// History
+const History = [];
+
 const favorites = document.getElementsByClassName("favorite");
 
 // Loop through them and add event listener
@@ -10,7 +13,6 @@ for (let i = 0; i < favorites.length; i++) {
   });
 }
 
-
 // Calling function
 
 function calling(id) {
@@ -20,26 +22,25 @@ function calling(id) {
   const chaild = document.getElementById(id);
   const parent = chaild.parentNode;
   const grandParent = parent.parentNode;
-  console.log(grandParent);
   const serviceName = grandParent.querySelector("#serviceName").innerText;
   const number = grandParent.querySelector("#number").innerText;
 
   if (coinNumber >= 20) {
     coins.innerText = coinNumber - 20;
-    alert(
-      "Calling Emergency Hotline...Service: " +
-        serviceName +
-        "Number: " +
-        number
-    );
+    alert("Calling Emergency Hotline...Service: " + serviceName + "Number: " + number);
+    History.push({
+      serviceName: serviceName,
+      number: number,
+      time: new Date().toLocaleString(),
+    });
+
+    seeCallHistory();
   } else {
-    alert(
-      "You don't have enough coins to make a call. Please recharge your coins."
-    );
+    alert("You don't have enough coins to make a call. Please recharge your coins.");
   }
 }
 
-// Copyed Function 
+// Copyed Function
 
 function copyNumber(id) {
   const chaild = document.getElementById(id);
@@ -53,47 +54,88 @@ function copyNumber(id) {
   let copyNumber = parseInt(copyNumberElement.innerText);
   copyNumber = copyNumber + 1;
   copyNumberElement.innerText = copyNumber;
-} 
-
-
-
-
+}
 
 document.getElementById("callNationalEmergency").addEventListener("click", function () {
-    calling("callNationalEmergency");});
+  calling("callNationalEmergency");
+});
 document.getElementById("callPolice").addEventListener("click", function () {
-  calling("callPolice");});
+  calling("callPolice");
+});
 document.getElementById("callFireService").addEventListener("click", function () {
-    calling("callFireService");});
+  calling("callFireService");
+});
 document.getElementById("callAmbulance").addEventListener("click", function () {
-  calling("callAmbulance");});
+  calling("callAmbulance");
+});
 document.getElementById("callWoman&child").addEventListener("click", function () {
-    calling("callWoman&child");});
+  calling("callWoman&child");
+});
 document.getElementById("callAntryCorruption").addEventListener("click", function () {
-    calling("callAntryCorruption");});
+  calling("callAntryCorruption");
+});
 document.getElementById("callElectricity").addEventListener("click", function () {
-    calling("callElectricity");});
+  calling("callElectricity");
+});
 document.getElementById("callBrac").addEventListener("click", function () {
-  calling("callBrac");});
+  calling("callBrac");
+});
 document.getElementById("callBDRail").addEventListener("click", function () {
-  calling("callBDRail");});
-
+  calling("callBDRail");
+});
 
 document.getElementById("copyNationalEmergency").addEventListener("click", function () {
-    copyNumber("copyNationalEmergency");});
+  copyNumber("copyNationalEmergency");
+});
 document.getElementById("copyPolice").addEventListener("click", function () {
-    copyNumber("copyPolice");});
+  copyNumber("copyPolice");
+});
 document.getElementById("copyFireService").addEventListener("click", function () {
-    copyNumber("copyFireService");});
+  copyNumber("copyFireService");
+});
 document.getElementById("copyAmbulance").addEventListener("click", function () {
-    copyNumber("copyAmbulance");});
+  copyNumber("copyAmbulance");
+});
 document.getElementById("copyWoman&child").addEventListener("click", function () {
-    copyNumber("copyWoman&child");});
+  copyNumber("copyWoman&child");
+});
 document.getElementById("copyAntryCorruption").addEventListener("click", function () {
-    copyNumber("copyAntryCorruption");});    
+  copyNumber("copyAntryCorruption");
+});
 document.getElementById("copyElectricity").addEventListener("click", function () {
-    copyNumber("copyElectricity");});
+  copyNumber("copyElectricity");
+});
 document.getElementById("copyBrac").addEventListener("click", function () {
-    copyNumber("copyBrac");});
+  copyNumber("copyBrac");
+});
 document.getElementById("copyBDRail").addEventListener("click", function () {
-    copyNumber("copyBDRail");});   
+  copyNumber("copyBDRail");
+});
+
+function seeCallHistory() {
+  let callHistorySection = document.getElementById("callHistorySection");
+  callHistorySection.innerHTML = ``;
+
+  for (const data of History) {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <div class="w-[350px] bg-[#fafafa] p-4 rounded-[16px] flex justify-between items-center mb-3 shadow-sm">
+        <div>
+          <p class="font-medium text-[16px]">${data.serviceName}</p>
+          <p class="text-[#5c5c5c] font-normal text-base">${data.number}</p>
+        </div>
+        <div class="mt-2 text-right">
+          <p class="text-[#5c5c5c] font-normal text-sm">${data.time}</p>
+        </div>
+      </div>
+    `;
+    callHistorySection.appendChild(div);
+  }
+}
+
+seeCallHistory();
+
+document.getElementById("clearButton").addEventListener("click", function () {
+  History = [];
+  callHistorySection.innerHTML = "";
+});
