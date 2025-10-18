@@ -28,16 +28,16 @@
         <div class="w-[397px] h-13 grid grid-cols-3 gap-5">
             <div
                 class="p-3 flex items-center justify-center gap-[10px] border-[#41ff6b1a] rounded-[50px] bg-[#41ff6b1a]">
-                <p class="text-center font-[16px] font-inter text-base font-black">0</p>
+                <p id="fav-number" class="text-center text-[16px] font-inter text-base font-black">0</p>
                 <div><img class="w-[30px] h-[30px]" src="assets/heart.png" alt=""></div>
             </div>
             <div
                 class="p-3 flex items-center justify-center gap-[10px] border-[#41ff6b1a] rounded-[50px] bg-[#41ff6b1a]">
-                <p class="text-center font-[16px] font-inter text-base font-black">100</p>
+                <p id="coin-number" class="text-center text-[16px] font-inter text-base font-black">100</p>
                 <div><img class="w-[30px] h-[30px]" src="assets/coin.png" alt=""></div>
             </div>
             <div class="flex items-center gap-2 font py-3 px-9 bg-[#00a63e] border-[#00a63e] rounded-[50px]">
-                <p class="font-medium text-white">0</p>
+                <p id="copy-number" class="font-medium text-white">0</p>
                 <p class="font-medium text-white">Copy</p>
             </div>
 
@@ -58,27 +58,27 @@
         <div class="w-[1370px] grid grid-cols-3 gap-[30px]">
 
             <!-- National Emergency Number Card -->
-            <div class="bg-white p-8">
+            <div id="NEN" class="bg-white p-8">
                 <div class="flex items-center justify-between">
                     <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-2xl flex items-center justify-center">
                         <img class="w-8 h-8" src="assets/emergency.png" alt="">
                     </div>
-                    <i class="fa-regular fa-heart text-2xl"></i>
+                    <i class="favorite fa-regular fa-heart text-2xl"></i>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">National Emergency Number</p>
-                    <p class="text-lg text-[#5c5c5c] font-normal">National Emergency</p>
+                    <p id="serviceName" class="text-[20px] font-roboto font-bold text-left">National Emergency Number</p>
+                    <p  class="text-lg text-[#5c5c5c] font-normal">National Emergency</p>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">999</p>
+                    <p id="number" class="text-[20px] font-roboto font-bold text-left">999</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">All</p>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                    <button class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="copyNationalEmergency" class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
 
-                    <button class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="callNationalEmergency" class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>
 
@@ -92,22 +92,22 @@
                     <div class="w-[60px] h-[60px] bg-[#dfefff] rounded-2xl flex items-center justify-center">
                         <img class="w-8 h-8" src="assets/police.png" alt="">
                     </div>
-                    <i class="fa-regular fa-heart text-2xl"></i>
+                    <i class="favorite fa-regular fa-heart text-2xl"></i>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">Police Helpline Number</p>
+                    <p id="serviceName" class="text-[20px] font-roboto font-bold text-left">Police Helpline Number</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Police</p>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">999</p>
+                    <p id="number" class="text-[20px] font-roboto font-bold text-left">999</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Police</p>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                    <button class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="copyNationalEmergency" class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
 
-                    <button class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="callPolice" class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>   
                 </div>
@@ -119,22 +119,22 @@
                     <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-2xl flex items-center justify-center">
                         <img class="w-8 h-8" src="assets/fire-service.png" alt="">
                     </div>
-                    <i class="fa-regular fa-heart text-2xl"></i>
+                    <i class="favorite fa-regular fa-heart text-2xl"></i>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">Fire Service Number</p>
+                    <p id="serviceName" class="text-[20px] font-roboto font-bold text-left">Fire Service Number</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Fire Service</p>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">999</p>
+                    <p id="number" class="text-[20px] font-roboto font-bold text-left">999</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Fire</p>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                    <button class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="copyNationalEmergency" class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
 
-                    <button class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="callFireService" class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>   
                 </div>
@@ -146,22 +146,22 @@
                     <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-2xl flex items-center justify-center">
                         <img class="w-8 h-8" src="assets/ambulance.png" alt="">
                     </div>
-                    <i class="fa-regular fa-heart text-2xl"></i>
+                    <i class="favorite fa-regular fa-heart text-2xl"></i>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">Ambulance Service</p>
+                    <p id="serviceName" class="text-[20px] font-roboto font-bold text-left">Ambulance Service</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Ambulance</p>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">1994-999999</p>
+                    <p id="number" class="text-[20px] font-roboto font-bold text-left">1994-999999</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Health</p>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                    <button class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="copyNationalEmergency" class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
 
-                    <button class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="callAmbulance" class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>   
                 </div>
@@ -173,22 +173,22 @@
                     <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-2xl flex items-center justify-center">
                         <img class="w-8 h-8" src="assets/emergency.png" alt="">
                     </div>
-                    <i class="fa-regular fa-heart text-2xl"></i>
+                    <i class="favorite fa-regular fa-heart text-2xl"></i>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">Women & Child Helpline</p>
+                    <p id="serviceName" class="text-[20px] font-roboto font-bold text-left">Women & Child Helpline</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Women & Child Helpline</p>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">109</p>
+                    <p id="number" class="text-[20px] font-roboto font-bold text-left">109</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Help</p>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                    <button class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="copyNationalEmergency" class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
 
-                    <button class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="callWoman&child" class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>   
                 </div>
@@ -200,22 +200,22 @@
                     <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-2xl flex items-center justify-center">
                         <img class="w-8 h-8" src="assets/emergency.png" alt="">
                     </div>
-                    <i class="fa-regular fa-heart text-2xl"></i>
+                    <i class="favorite fa-regular fa-heart text-2xl"></i>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">Anti-Corruption Helpline</p>
+                    <p id="serviceName" class="text-[20px] font-roboto font-bold text-left">Anti-Corruption Helpline</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Anti-Corruption</p>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">106</p>
+                    <p id="number" class="text-[20px] font-roboto font-bold text-left">106</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Govt.</p>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                    <button class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="copyNationalEmergency" class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
 
-                    <button class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="callAntryCorruption" class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>   
                 </div>
@@ -227,22 +227,22 @@
                     <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-2xl flex items-center justify-center">
                         <img class="w-8 h-8" src="assets/emergency.png" alt="">
                     </div>
-                    <i class="fa-regular fa-heart text-2xl"></i>
+                    <i class="favorite fa-regular fa-heart text-2xl"></i>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">Electricity Helpline</p>
+                    <p id="serviceName" class="text-[20px] font-roboto font-bold text-left">Electricity Helpline</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Electricity Outage</p>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">16216</p>
+                    <p id="number" class="text-[20px] font-roboto font-bold text-left">16216</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Electricity</p>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                    <button class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="copyNationalEmergency" class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
 
-                    <button class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="callElectricity" class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>   
                 </div>
@@ -254,22 +254,22 @@
                     <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-2xl flex items-center justify-center">
                         <img class="w-8 h-8" src="assets/emergency.png" alt="">
                     </div>
-                    <i class="fa-regular fa-heart text-2xl"></i>
+                    <i class="favorite fa-regular fa-heart text-2xl"></i>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">Brac Helpline</p>
+                    <p id="serviceName" class="text-[20px] font-roboto font-bold text-left">Brac Helpline</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Brac</p>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">16445</p>
+                    <p id="number" class="text-[20px] font-roboto font-bold text-left">16445</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">NGO</p>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                    <button class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="copyNationalEmergency" class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
 
-                    <button class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="callBrac" class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>   
                 </div>
@@ -281,22 +281,22 @@
                     <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-2xl flex items-center justify-center">
                         <img class="w-8 h-8" src="assets/emergency.png" alt="">
                     </div>
-                    <i class="fa-regular fa-heart text-2xl"></i>
+                    <i class="favorite fa-regular fa-heart text-2xl"></i>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">Bangladesh Railway Helpline </p>
+                    <p id="serviceName" class="text-[20px] font-roboto font-bold text-left">Bangladesh Railway Helpline </p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Bangladesh Railway</p>
                 </div>
                 <div class="mt-4 mb-6">
-                    <p class="text-[20px] font-roboto font-bold text-left">163</p>
+                    <p id="number" class="text-[20px] font-roboto font-bold text-left">163</p>
                     <p class="text-lg text-[#5c5c5c] font-normal">Travel</p>
                 </div>
                 <div class="flex justify-between items-center gap-2">
-                    <button class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="copyNationalEmergency" class="btn p-4 bg-white rounded-lg w-[140px] h-12 text-[#5c5c5c] font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-regular fa-copy"></i> Copy
                     </button>
 
-                    <button class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
+                    <button id="callBDRail" class="btn p-4 bg-[#00a63e] rounded-lg w-[180px] h-12 text-white font-semibold text-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call
                     </button>   
                 </div>
