@@ -79,4 +79,21 @@ document.getElementById("callBDRail").addEventListener("click", function () {
   calling("callBDRail");});
 
 
-  
+document.getElementById("copyNationalEmergency").addEventListener("click", function () {
+    copyNumber("copyNationalEmergency");});
+document.getElementById("copyPolice").addEventListener("click", function () {
+    copyNumber("copyPolice");});
+document.getElementById("copyFireService").addEventListener("click", function () {
+    copyNumber("copyFireService");});
+document.getElementById("copyAmbulance").addEventListener("click", function () {
+    copyNumber("copyAmbulance");});
+document.getElementById("copyWoman&child").addEventListener("click", function () {
+    copyNumber("copyWoman&child");});
+document.getElementById("copyAntryCorruption").addEventListener("click", function () {
+    copyNumber("copyAntryCorruption");});    
+document.getElementById("copyElectricity").addEventListener("click", function () {
+    copyNumber("copyElectricity");});
+document.getElementById("copyBrac").addEventListener("click", function () {
+    copyNumber("copyBrac");});
+document.getElementById("copyBDRail").addEventListener("click", function () {
+    copyNumber("copyBDRail");});   
